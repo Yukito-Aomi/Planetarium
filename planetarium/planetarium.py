@@ -16,20 +16,22 @@ class Planetarium(ShowBase):
 
     # 地球のモデル
     MODEL_EARTH = 'misc/sphere'
-    # 軸のモデル
+    # 座標軸のモデル
     MODEL_AXIS = 'zup-axis'
 
-    def __init__(self, window_size: tuple[int] = DEFAULT_WINDOW_SIZE, window_title: str = DEFAULT_WINDOW_TITLE) -> None:
+    def __init__(self, size: tuple[int] = DEFAULT_WINDOW_SIZE, title: str = DEFAULT_WINDOW_TITLE) -> None:
         """
         コンストラクタ
+        :param size: ウィンドウのサイズ（縦幅／横幅）
+        :param title: ウィンドウのタイトル
         """
-        # スーパークラスの初期化
+        # ShowBase の初期化
         ShowBase.__init__(self)
 
         # ウィンドウの設定
         self.props = WindowProperties()
-        self.props.setTitle(window_title)
-        self.props.setSize(window_size)
+        self.props.setTitle(title)
+        self.props.setSize(size)
         self.win.requestProperties(self.props)
         self.setBackgroundColor(0, 0, 0)  # 黒色
 
@@ -40,9 +42,3 @@ class Planetarium(ShowBase):
         # 座標軸の追加
         self.axis = self.loader.loadModel(self.MODEL_AXIS)
         self.axis.reparentTo(self.render)
-
-    def __del__(self) -> None:
-        """
-        デストラクタ
-        """
-        pass
