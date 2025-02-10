@@ -19,7 +19,7 @@ class Planetarium(ShowBase):
     # 座標軸のモデル
     MODEL_AXIS = 'zup-axis'
 
-    def __init__(self, size: tuple[int] = DEFAULT_WINDOW_SIZE, title: str = DEFAULT_WINDOW_TITLE) -> None:
+    def __init__(self, size: tuple[int, int] = DEFAULT_WINDOW_SIZE, title: str = DEFAULT_WINDOW_TITLE) -> None:
         """
         コンストラクタ
         :param size: ウィンドウのサイズ（縦幅／横幅）
