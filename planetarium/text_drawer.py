@@ -53,7 +53,7 @@ class TextDrawer3D(OnscreenText):
         :param scale: テキストのスケール
         :param fg: テキストの前景色
         """
-        self.label_node = parent.attachNewNode(PandaNode('label_node'))
+        self.label_node = parent.attach_new_node(PandaNode('label_node'))
 
         # スーパークラスのコンストラクタ呼出し
         super().__init__(text=text, pos=pos, scale=scale, fg=fg, font=font, parent=self.label_node)
@@ -61,15 +61,15 @@ class TextDrawer3D(OnscreenText):
     def look_at_origin(self, x, y, z) -> None:
         """
         ３Ｄテキストのスーパーノード（label_node）を原点方向に回転するメソッド
-        :param x: ｘ座標
-        :param y: ｙ座標
-        :param z: ｚ座標
+        :param x: Ｘ座標
+        :param y: Ｙ座標
+        :param z: Ｚ座標
         """
-        # ヨー角（ｚ軸を中心とする回転角度）
+        # ヨー角（Ｚ軸を中心とする回転角度）
         h = degrees(atan2(y, x)) - 90
-        # ピッチ角（ｘ軸を中心とする回転角度）
+        # ピッチ角（Ｘ軸を中心とする回転角度）
         p = degrees(atan2(z, sqrt(x**2 + y**2)))
-        # ロール角（ｙ軸を中心とする回転角度）
+        # ロール角（Ｙ軸を中心とする回転角度）
         r = 0
 
-        self.label_node.setHpr(h, p, r)
+        self.label_node.set_hpr(h, p, r)

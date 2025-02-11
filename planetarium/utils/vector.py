@@ -8,9 +8,9 @@ import numpy as np
 def convert_to_polar(x: float, y: float, z: float) -> tuple[float, float, float]:
     """
     直交座標を極座標に変換する関数
-    :param x: 直交座標系におけるｘ座標（x）
-    :param y: 直交座標系におけるｙ座標（y）
-    :param z: 直交座標系におけるｚ座標（z）
+    :param x: 直交座標系におけるＸ座標（x）
+    :param y: 直交座標系におけるＹ座標（y）
+    :param z: 直交座標系におけるＺ座標（z）
     :return: 極座標（(r, θ, φ)）
     """
     # 極座標系における動径（r）及び偏角（θ，φ）の算出
@@ -31,7 +31,7 @@ def convert_to_cartesian(r: float, theta: float, phi: float) -> tuple[float, flo
     """
     theta_rad, phi_rad = radians(theta), radians(phi)
 
-    # 直交座標系におけるｘ座標，ｙ座標，及びｚ座標の算出
+    # 直交座標系におけるＸ座標，Ｙ座標，及びＺ座標の算出
     x = r * sin(theta_rad) * cos(phi_rad)
     y = r * sin(theta_rad) * sin(phi_rad)
     z = r * cos(theta_rad)
@@ -42,9 +42,9 @@ def convert_to_cartesian(r: float, theta: float, phi: float) -> tuple[float, flo
 def get_point_from_rotated_coordinates(x, y, z, heading, pitch, roll):
     """
     回転された座標系における固定点の座標を取得する関数
-    :param x: 固定点のｘ座標（x）
-    :param y: 固定点のｙ座標（y）
-    :param z: 固定点のｚ座標（z）
+    :param x: 固定点のＸ座標（x）
+    :param y: 固定点のＹ座標（y）
+    :param z: 固定点のＺ座標（z）
     :param heading: 回転された座標系における固定点のヨー角（ψ）
     :param pitch: 回転された座標系における固定点のピッチ角（θ）
     :param roll: 回転された座標系における固定点のロール角（φ）

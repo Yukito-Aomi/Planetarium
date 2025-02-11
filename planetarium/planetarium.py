@@ -30,15 +30,15 @@ class Planetarium(ShowBase):
 
         # ウィンドウの設定
         self.props = WindowProperties()
-        self.props.setTitle(title)
-        self.props.setSize(size)
-        self.win.requestProperties(self.props)
-        self.setBackgroundColor(0, 0, 0)  # 黒色
+        self.props.set_title(title)
+        self.props.set_size(size)
+        self.win.request_properties(self.props)
+        self.set_background_color(0, 0, 0)  # 黒色
 
         # 地球の追加
-        self.earth = self.loader.loadModel(self.MODEL_EARTH)
-        self.earth.setColor(0, 0, 1)  # 青色
-        self.earth.reparentTo(self.render)
+        self.earth = self.loader.load_model(self.MODEL_EARTH)
+        self.earth.set_color(0, 0, 1)  # 青色
+        self.earth.reparent_to(self.render)
         # 座標軸の追加
-        self.axis = self.loader.loadModel(self.MODEL_AXIS)
-        self.axis.reparentTo(self.render)
+        self.axis = self.loader.load_model(self.MODEL_AXIS)
+        self.axis.reparent_to(self.render)
