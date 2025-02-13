@@ -9,7 +9,7 @@ from panda3d.core import TextNode, PandaNode
 
 class TextDrawer2D(OnscreenText):
     """
-    ２Ｄテキストを描画するクラス
+    ２Ｄテキストを描画するためのクラス
     """
     # デフォルトのテキスト・ポジション
     DEFAULT_TEXT_POSITION = (0.05, -0.1)

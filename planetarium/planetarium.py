@@ -7,7 +7,7 @@ from panda3d.core import *
 
 class Planetarium(ShowBase):
     """
-    プラネタリウムを作成するクラス
+    プラネタリウムを作成するためのクラス
     """
     # デフォルトのウィンドウ・タイトル
     DEFAULT_WINDOW_TITLE = 'Planetarium'

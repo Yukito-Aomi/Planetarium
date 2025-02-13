@@ -8,7 +8,7 @@ from .utils.geom import *
 
 class CelestialSphere:
     """
-    天球を描画するクラス
+    天球を描画するためのクラス
     """
     # デフォルトの球のライン・カラー
     DEFAULT_SPHERE_LINE_COLOR = (0.5, 0.5, 0.5, 1)
