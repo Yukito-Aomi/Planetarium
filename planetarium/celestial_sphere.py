@@ -10,9 +10,9 @@ class CelestialSphere:
     """
     天球を描画するためのクラス
     """
-    # デフォルトの球のライン・カラー
+    # 球のライン・カラーのデフォルト値
     DEFAULT_SPHERE_LINE_COLOR = (0.5, 0.5, 0.5, 1)
-    # デフォルトの球のサーフェス・カラー
+    # 球のサーフェス・カラーのデフォルト値
     DEFAULT_SPHERE_SURFACE_COLOR = (0, 1, 0, 0.3)
 
     def __init__(self, base, line_color: tuple[float, float, float, float] = DEFAULT_SPHERE_LINE_COLOR, surface_color: tuple[float, float, float, float] = DEFAULT_SPHERE_SURFACE_COLOR) -> None:

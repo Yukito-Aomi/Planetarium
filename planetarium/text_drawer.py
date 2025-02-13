@@ -11,11 +11,11 @@ class TextDrawer2D(OnscreenText):
     """
     ２Ｄテキストを描画するためのクラス
     """
-    # デフォルトのテキスト・ポジション
+    # テキスト・ポジションのデフォルト値
     DEFAULT_TEXT_POSITION = (0.05, -0.1)
-    # デフォルトのテキスト・スケール
+    # テキスト・スケールのデフォルト値
     DEFAULT_TEXT_SCALE = 0.1
-    # デフォルトのテキスト・カラー（前景）
+    # テキスト・カラー（前景）のデフォルト値
     DEFAULT_TEXT_COLOR_FOREGROUND = (1, 1, 1, 1)
 
     def __init__(self, text, font, parent, pos=DEFAULT_TEXT_POSITION, scale=DEFAULT_TEXT_SCALE, fg=DEFAULT_TEXT_COLOR_FOREGROUND) -> None:
@@ -36,11 +36,11 @@ class TextDrawer3D(OnscreenText):
     """
     ３Ｄテキストを描画するクラス
     """
-    # デフォルトのテキスト・ポジション
+    # テキスト・ポジションのデフォルト値
     DEFAULT_TEXT_POSITION = (0, 0)
-    # デフォルトのテキスト・スケール
+    # テキスト・スケールのデフォルト値
     DEFAULT_TEXT_SCALE = 5
-    # デフォルトのテキスト・カラー（前景）
+    # テキスト・カラー（前景）のデフォルト値
     DEFAULT_TEXT_COLOR_FOREGROUND = (1, 1, 1, 1)
 
     def __init__(self, text, font, parent, pos=DEFAULT_TEXT_POSITION, scale=DEFAULT_TEXT_SCALE, fg=DEFAULT_TEXT_COLOR_FOREGROUND) -> None:

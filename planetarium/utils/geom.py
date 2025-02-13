@@ -6,9 +6,9 @@ from math import *
 from panda3d.core import *
 
 
-# デフォルトの線の太さ
+# 線の太さのデフォルト値
 DEFAULT_THICKNESS = 1.0
-# デフォルトのセグメント数
+# セグメント数のデフォルト値
 DEFAULT_SEGMENTS = 64
 
 
@@ -53,7 +53,7 @@ def create_geom(parent, vertices: list, color: tuple[float, float, float, float]
     # ノードパスの作成及びスーパーノードへの追加
     node_path = parent.attach_new_node(node)
     node_path.set_color(*color)
-    node_path.set_render_model_thickness(thickness)
+    node_path.set_render_mode_thickness(thickness)
 
     # 透過属性の設定
     if len(vertices) == 3:
