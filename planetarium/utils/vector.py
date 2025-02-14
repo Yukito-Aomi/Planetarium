@@ -5,7 +5,7 @@ from math import acos, atan2, sin, cos, degrees, radians, sqrt
 import numpy as np
 
 
-def convert_to_polar(x: float, y: float, z: float) -> tuple[float, float, float]:
+def convert_to_polar(x: float, y: float, z: float) -> tuple[float,float,float]:
     """
     直交座標を極座標に変換する関数
     :param x: 直交座標系におけるＸ座標（x）
@@ -21,7 +21,7 @@ def convert_to_polar(x: float, y: float, z: float) -> tuple[float, float, float]
     return r, theta, phi
 
 
-def convert_to_cartesian(r: float, theta: float, phi: float) -> tuple[float, float, float]:
+def convert_to_cartesian(r: float, theta: float, phi: float) -> tuple[float,float,float]:
     """
     極座標を直交座標に変換する関数
     :param r: 極座標系における動径（r）
@@ -39,7 +39,7 @@ def convert_to_cartesian(r: float, theta: float, phi: float) -> tuple[float, flo
     return x, y, z
 
 
-def get_point_from_rotated_coordinates(x, y, z, heading, pitch, roll):
+def get_point_from_rotated_coordinates(x: float, y: float, z: float, heading: float, pitch: float, roll: float):
     """
     回転された座標系における固定点の座標を取得する関数
     :param x: 固定点のＸ座標（x）
@@ -77,7 +77,7 @@ def get_point_from_rotated_coordinates(x, y, z, heading, pitch, roll):
     return rotation_matrix.dot(np.array([x, y, z]))
 
 
-def convert_star_position(h_ra, m_ra, s_ra, d_dec, m_dec, s_dec, radius) -> tuple[float, float, float]:
+def convert_star_position(h_ra, m_ra, s_ra, d_dec, m_dec, s_dec, radius) -> tuple[float,float,float]:
     """
     恒星，星座線，又は星座名ラベルの位置する赤道座標を直行座標に変換する関数
     :param h_ra: 赤経における時（hours）

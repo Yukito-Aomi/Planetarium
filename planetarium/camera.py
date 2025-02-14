@@ -72,6 +72,7 @@ class Camera:
         self.base.accept('--repeat', self.move, [1, 0, 0])
         self.base.accept('r', self.reset_position)
         self.base.accept('c', self.toggle)
+        self.base.accept('escape', exit)
 
     def update_position(self) -> None:
         """
@@ -98,7 +99,7 @@ class Camera:
             self.base.camLens.set_fov(self.external_camera_fov)
             self.base.camera.reparent_to(self.base.render)
 
-    def move(self, r_diff, theta_diff, phi_diff) -> None:
+    def move(self, r_diff: float, theta_diff: float, phi_diff: float) -> None:
         """
         カメラを移動する関数
         :param r_diff: 動径（r）の差分

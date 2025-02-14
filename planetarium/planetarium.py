@@ -13,10 +13,12 @@ class Planetarium(ShowBase):
     """
     プラネタリウムを作成するためのクラス
     """
-    # ウィンドウ・タイトルのデフォルト値
-    DEFAULT_WINDOW_TITLE = 'Planetarium'
     # ウィンドウ・サイズのデフォルト値（縦幅／横幅）
     DEFAULT_WINDOW_SIZE = (640, 480)
+    # ウィンドウ・タイトルのデフォルト値
+    DEFAULT_WINDOW_TITLE = 'Planetarium'
+    # 天球における半径のデフォルト値
+    DEFAULT_CELESTIAL_SPHERE_RADIUS = 100
     # 観測地点における緯度のデフォルト値
     DEFAULT_LOCATION_LATITUDE = 35
 
@@ -30,19 +32,16 @@ class Planetarium(ShowBase):
     # 座標軸のモデル
     MODEL_AXIS = 'zup-axis'
 
-    # 天球の半径
-    CELESTIAL_SPHERE_RADIUS = 100
 
-    def __init__(self, size: tuple[int, int] = DEFAULT_WINDOW_SIZE, title: str = DEFAULT_WINDOW_TITLE, location_latitude: float = DEFAULT_LOCATION_LATITUDE) -> None:
+    def __init__(self) -> None:
         """
         コンストラクタ
-        :param size: ウィンドウのサイズ（縦幅／横幅）
-        :param title: ウィンドウのタイトル
         """
         # ShowBase の初期化
         ShowBase.__init__(self)
 
-        self.location_latitude = location_latitude
+        self.CELESTIAL_SPHERE_RADIUS = self.DEFAULT_CELESTIAL_SPHERE_RADIUS
+        self.location_latitude = self.DEFAULT_LOCATION_LATITUDE
 
         # フォントの設定
         if platform.system() == 'Windows':
@@ -52,8 +51,8 @@ class Planetarium(ShowBase):
 
         # ウィンドウの設定
         self.props = WindowProperties()
-        self.props.set_title(title)
-        self.props.set_size(size)
+        self.props.set_size(self.DEFAULT_WINDOW_SIZE)
+        self.props.set_title(self.DEFAULT_WINDOW_TITLE)
         self.win.request_properties(self.props)
         self.set_background_color(0, 0, 0)  # 黒色
 

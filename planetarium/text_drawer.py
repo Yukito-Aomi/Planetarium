@@ -18,7 +18,7 @@ class TextDrawer2D(OnscreenText):
     # テキスト・カラー（前景）のデフォルト値
     DEFAULT_TEXT_COLOR_FOREGROUND = (1, 1, 1, 1)
 
-    def __init__(self, text, font, parent, pos=DEFAULT_TEXT_POSITION, scale=DEFAULT_TEXT_SCALE, fg=DEFAULT_TEXT_COLOR_FOREGROUND) -> None:
+    def __init__(self, text, font, parent, pos: tuple[float,float] = DEFAULT_TEXT_POSITION, scale: float = DEFAULT_TEXT_SCALE, fg: tuple[float,float,float,float] = DEFAULT_TEXT_COLOR_FOREGROUND) -> None:
         """
         コンストラクタ
         :param text: テキストの内容
@@ -43,7 +43,7 @@ class TextDrawer3D(OnscreenText):
     # テキスト・カラー（前景）のデフォルト値
     DEFAULT_TEXT_COLOR_FOREGROUND = (1, 1, 1, 1)
 
-    def __init__(self, text, font, parent, pos=DEFAULT_TEXT_POSITION, scale=DEFAULT_TEXT_SCALE, fg=DEFAULT_TEXT_COLOR_FOREGROUND) -> None:
+    def __init__(self, text, font, parent, pos: tuple[float,float] = DEFAULT_TEXT_POSITION, scale: float = DEFAULT_TEXT_SCALE, fg: tuple[float,float,float,float] = DEFAULT_TEXT_COLOR_FOREGROUND) -> None:
         """
         コンストラクタ
         :param text: テキストの内容
@@ -58,7 +58,7 @@ class TextDrawer3D(OnscreenText):
         # スーパークラスのコンストラクタ呼出し
         super().__init__(text=text, pos=pos, scale=scale, fg=fg, font=font, parent=self.label_node)
 
-    def look_at_origin(self, x, y, z) -> None:
+    def look_at_origin(self, x: float, y: float, z: float) -> None:
         """
         ３Ｄテキストのスーパーノード（label_node）を原点方向に回転するメソッド
         :param x: Ｘ座標

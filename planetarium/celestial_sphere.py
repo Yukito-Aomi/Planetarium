@@ -15,7 +15,7 @@ class CelestialSphere:
     # 球のサーフェス・カラーのデフォルト値
     DEFAULT_SPHERE_SURFACE_COLOR = (0, 1, 0, 0.3)
 
-    def __init__(self, base, line_color: tuple[float, float, float, float] = DEFAULT_SPHERE_LINE_COLOR, surface_color: tuple[float, float, float, float] = DEFAULT_SPHERE_SURFACE_COLOR) -> None:
+    def __init__(self, base) -> None:
         """
         コンストラクタ
         :param base: ベース
@@ -23,8 +23,8 @@ class CelestialSphere:
         self.base = base
         # 天球の設定
         self.radius = self.base.CELESTIAL_SPHERE_RADIUS
-        self.line_color = line_color
-        self.surface_color = surface_color
+        self.line_color = self.DEFAULT_SPHERE_LINE_COLOR
+        self.surface_color = self.DEFAULT_SPHERE_SURFACE_COLOR
 
         # 天球の作成
         self.create()

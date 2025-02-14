@@ -12,7 +12,7 @@ DEFAULT_THICKNESS = 1.0
 DEFAULT_SEGMENTS = 64
 
 
-def create_geom(parent, vertices: list, color: tuple[float, float, float, float], thickness: float = DEFAULT_THICKNESS):
+def create_geom(parent, vertices: list, color: tuple[float,float,float,float], thickness: float = DEFAULT_THICKNESS):
     """
     図形オブジェクトを生成するヘルパー関数
     :param parent: スーパーノード
@@ -61,7 +61,7 @@ def create_geom(parent, vertices: list, color: tuple[float, float, float, float]
     return node_path
 
 
-def draw_line(parent, point1, point2, color: tuple[float, float, float, float], thickness: float = DEFAULT_THICKNESS):
+def draw_line(parent, point1, point2, color: tuple[float,float,float,float], thickness: float = DEFAULT_THICKNESS):
     """
     直線を描画する関数
     :param parent: スーパーノード
@@ -74,7 +74,7 @@ def draw_line(parent, point1, point2, color: tuple[float, float, float, float], 
     return create_geom(parent, [point1, point2], color, thickness)
 
 
-def draw_circumference_zx(parent, radius, color: tuple[float, float, float, float], thickness: float = DEFAULT_THICKNESS, segments: int = DEFAULT_SEGMENTS):
+def draw_circumference_zx(parent, radius: float, color: tuple[float,float,float,float], thickness: float = DEFAULT_THICKNESS, segments: int = DEFAULT_SEGMENTS):
     """
     ＺＸ平面上に円を描画する関数
     :param parent: スーパーノード
@@ -91,7 +91,7 @@ def draw_circumference_zx(parent, radius, color: tuple[float, float, float, floa
     return create_geom(parent, vertices, color, thickness)
 
 
-def draw_filled_triangle(parent, point1, point2, point3, color: tuple[float, float, float, float]):
+def draw_filled_triangle(parent, point1, point2, point3, color: tuple[float,float,float,float]):
     """
     面が塗りつぶされた三角形を描画する関数
     :param parent: スーパーノード
