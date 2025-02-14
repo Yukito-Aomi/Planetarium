@@ -31,8 +31,7 @@ def create_geom(parent, vertices: list, color: tuple[float, float, float, float]
         vertex.add_data3f(*v)
 
     # プリミティヴの作成
-    if len(vertices) == 3:
-        # 頂点数が３つである場合（三角形を描画する場合）
+    if len(vertices) == 3:  # 頂点数が３つである場合（三角形を描画する場合）
         primitive = GeomTriangles(Geom.UHStatic)
         primitive.add_vertices(0, 1, 2)
     else:
@@ -56,8 +55,7 @@ def create_geom(parent, vertices: list, color: tuple[float, float, float, float]
     node_path.set_render_mode_thickness(thickness)
 
     # 透過属性の設定
-    if len(vertices) == 3:
-        # 頂点数が３つである場合（三角形を描画する場合）
+    if len(vertices) == 3:  # 頂点数が３つである場合（三角形を描画する場合）
         node_path.set_transparency(TransparencyAttrib.MAlpha)
 
     return node_path

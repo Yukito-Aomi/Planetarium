@@ -23,7 +23,7 @@ class TextDrawer2D(OnscreenText):
         コンストラクタ
         :param text: テキストの内容
         :param font: テキストのフォント
-        :param parent: 親ノード
+        :param parent: スーパーノード
         :param pos: テキストの位置
         :param scale: テキストのスケール
         :param fg: テキストの前景色

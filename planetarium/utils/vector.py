@@ -45,9 +45,9 @@ def get_point_from_rotated_coordinates(x, y, z, heading, pitch, roll):
     :param x: 固定点のＸ座標（x）
     :param y: 固定点のＹ座標（y）
     :param z: 固定点のＺ座標（z）
-    :param heading: 回転された座標系における固定点のヨー角（ψ）
-    :param pitch: 回転された座標系における固定点のピッチ角（θ）
-    :param roll: 回転された座標系における固定点のロール角（φ）
+    :param heading: 回転された座標系における固定点のヨー角
+    :param pitch: 回転された座標系における固定点のピッチ角
+    :param roll: 回転された座標系における固定点のロール角
     :return: 回転された座標系における固定点の座標
     """
     heading_rad, pitch_rad, roll_rad = radians(heading), radians(pitch), radians(roll)

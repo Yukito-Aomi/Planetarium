@@ -18,7 +18,7 @@ class CelestialSphere:
     def __init__(self, base, line_color: tuple[float, float, float, float] = DEFAULT_SPHERE_LINE_COLOR, surface_color: tuple[float, float, float, float] = DEFAULT_SPHERE_SURFACE_COLOR) -> None:
         """
         コンストラクタ
-        :param base: ベースとなるノード
+        :param base: ベース
         """
         self.base = base
         # 天球の設定
