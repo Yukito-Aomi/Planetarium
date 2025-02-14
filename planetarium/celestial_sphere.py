@@ -3,7 +3,7 @@
 
 from .langs.ja import DIRECTIONS
 from .text_drawer import TextDrawer3D
-from .utils.geom import *
+from .utils.geometry import *
 
 
 class CelestialSphere:
