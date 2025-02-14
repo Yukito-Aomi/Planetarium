@@ -61,9 +61,9 @@ class Planetarium(ShowBase):
         self.earth = self.loader.load_model(self.MODEL_EARTH)
         self.earth.set_color(0, 0, 1)  # 青色
         self.earth.reparent_to(self.render)
-        # 座標軸の追加
-        self.axis = self.loader.load_model(self.MODEL_AXIS)
-        self.axis.reparent_to(self.render)
+        # DEBUG: 座標軸の追加
+        # self.axis = self.loader.load_model(self.MODEL_AXIS)
+        # self.axis.reparent_to(self.render)
 
         self.sphere_node = self.render.attach_new_node('sphere_node')
         self.celestial_sphere = CelestialSphere(self)

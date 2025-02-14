@@ -19,7 +19,6 @@ class Camera:
     # 外部カメラにおける原点からの距離（半径）の最大値
     EXTERNAL_CAMERA_RADIUS_MAX = 800
 
-
     def __init__(self, base) -> None:
         """
         コンストラクタ

@@ -36,7 +36,7 @@ class CelestialSphere:
         # 天球における縦線の描画
         for i in range(12):
             angle = i * 360 / 24
-            thickness = 4 if i % 3 == 0 else 1
+            thickness = 3 if i % 3 == 0 else 1
 
             circle_path = draw_circumference_zx(self.base.sphere_node, self.radius, self.line_color, thickness)
             circle_path.set_h(angle)
@@ -61,7 +61,7 @@ class CelestialSphere:
         # 水平面における放射線の描画
         for i in range(12):
             angle = i * 180 / 12
-            thickness = 4 if i % 3 == 0 else 1
+            thickness = 3 if i % 3 == 0 else 1
 
             line_path = draw_line(self.base.sphere_node, (self.radius, 0, 0), (-self.radius, 0, 0), self.line_color, thickness)
             line_path.set_h(angle)
